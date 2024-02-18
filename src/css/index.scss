@@ -1,6 +1,36 @@
+@import "variables.scss";
+@import "mixins.scss";
+
 body {
 	background-color: rgb(221, 255, 0);
 }
+.carousel {
+	background-color: azure;
+	&__title {
+		color: aqua;
+	}
+	&__subtitle {
+		color: black;
+	}
+	&__link {
+		color: $primary;
+		&--uania {
+			color: $secondary;
+			&:active {
+				color: indianred;
+			}
+			&:hover {
+				font-size: 30px;
+			}
+		}
+	}
+}
 h1 {
 	color: rgb(255, 0, 162);
+}
+.class1 {
+	@include wygladbutton($width, $height, $font-size);
+}
+.class2 {
+	@include wygladbutton($width, $height, $font-size);
 }
